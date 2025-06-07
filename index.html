@@ -6,17 +6,7 @@
     <title>Inesh Vijayvergiya | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-       <script type="text/javascript">
-      (function(){
-        emailjs.init({
-        publicKey: "6R8g9KBtyOfez4xfF",
-       });
-     })();
-   </script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <div class="container">
@@ -203,15 +193,15 @@
                 <p>Wheter you're looking to build a new website, improve your existing platform, or bring a unique project to file. i'm here to help.</p>
             
                 <p>Full Name</p>
-                <input name="name" placeholder="Your Full name" type="text" required>
+                <input name="name" id="name" placeholder="Your Full name" type="text" required>
 
                 <p>Email Address</p>
-                <input name="email" placeholder="Your Email" type="email" required>
+                <input name="email" id="email" placeholder="Your Email" type="email" required>
 
                 <p>Your Message</p>
-                <input name="message" class="input-message" placeholder="Share your thoughts..." required>
+                <input name="message" id="message" class="input-message" placeholder="Share your thoughts..." required>
 
-                <button type="submit">Send Message <i class='bx bx-mail-send'></i></button>
+                <button type="submit" onclick="sendMail()">Send Message <i class='bxl bx-mail-send'></i></button>
              </div>
             </form>
         
@@ -233,5 +223,15 @@
       AOS.init();
     </script>
     <script src="server.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+     (function(){
+      emailjs.init({
+        publicKey: "6R8g9KBtyOfez4xfF",
+      });
+     })();
+    </script>
 </body>
 </html>
